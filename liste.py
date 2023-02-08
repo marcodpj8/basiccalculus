@@ -6,7 +6,6 @@ Created on Sun Feb  5 16:30:03 2023
 @author: marco
 """
 
-import pandas as pd
 
 def Makepair(a,b):
     return a, b
@@ -213,16 +212,3 @@ print(reduc(cs , lambda x,y:x+y , 0))
 print(reduc(makeintrange(1,5) , lambda x,y:x*y , 1))
 
 
-c=0
-data = pd.read_csv('nba.csv', index_col = 'Name')
-st = data['Salary']
-print(data)
-for x in data['Salary']:
-    if x > c:
-        c = x
-print(c)
-for x in data['Name']: 
-    if data['Salary'] == c:
-        st = data.loc[x]
-#dictionary = {'name':data['Name'], 'salary':data['Salary'], 'age':data['Age']}
-print(st)
